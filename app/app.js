@@ -4,6 +4,7 @@ const fetch = require('node-fetch');
 const {getPosts} = require('./controllers/posts');
 const cors = require('cors');
 
+app.use(cors()); // accepting all cors for dev environment
 
 const PORT = 5000;
 
@@ -41,4 +42,4 @@ app.listen(PORT, ()=>{
 })();
 
 // Route for getting posts
-app.get('/posts/:page', cors(), getPosts);
+app.get('/posts/:page', getPosts);

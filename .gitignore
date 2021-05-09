@@ -1,0 +1,4 @@
+node_modules/
+app/db/ads_posts.db
+.*
+!/.gitignore
